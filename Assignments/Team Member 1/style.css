@@ -1,0 +1,191 @@
+
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Urbanist", sans-serif;
+      }
+      #profile {
+        position: absolute;
+        bottom: -40px;
+        left: 70px;
+        object-fit: cover;
+        border: 5px solid #fff;
+      }
+      .mainBody {
+        width: 100%;
+        height: 860px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .nav {
+        width: 85%;
+        height: 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 350px;
+        font-size: larger;
+      }
+      .nav ul {
+        list-style-type: none;
+      }
+      .nav .right ul {
+        display: flex;
+        gap: 20px;
+      }
+      .innerBody {
+        width: 85%;
+        height: 85%;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+          rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+          rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+      }
+      .innerBody .iwrapper {
+        margin: 20px;
+      }
+      .innerBody .iwrapper .top {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: rgb(48, 70, 157);
+      }
+      .innerBody .iwrapper .top .profile {
+        width: 40%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        position: relative;
+      }
+      .innerBody .iwrapper .top .desc {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: left;
+        text-align: left;
+        justify-content: center;
+      }
+      .innerBody .iwrapper .top .desc button {
+        width: 130px;
+        height: 40px;
+        border-radius: 25px;
+      }
+
+      /* midddle */
+      .innerBody .iwrapper .middle {
+        width: 100%;
+        height: 180px;
+        display: flex;
+        margin-top: 60px;
+        gap: 50px;
+      }
+      .innerBody .iwrapper .middle .left {
+        width: 750px;
+        height: 100%;
+      }
+      .innerBody .iwrapper .middle .left h2 {
+        margin-bottom: 20px;
+      }
+      .innerBody .iwrapper .middle .left p {
+        width: 600px;
+        letter-spacing: 1px;
+        line-height: 1.4;
+      }
+      .innerBody .iwrapper .middle .right1 {
+        width: 200px;
+        height: 100%;
+      }
+      .innerBody .iwrapper .middle .right1 ul {
+        list-style-type: none;
+        margin-top: 20px;
+      }
+      .innerBody .iwrapper .middle .right2 {
+        width: 200px;
+        height: 100%;
+      }
+      .innerBody .iwrapper .middle .right2 ul {
+        list-style-type: none;
+        margin-top: 20px;
+      }
+
+      /* bottom */
+      .innerBody .iwrapper .bottom {
+        width: 100%;
+        height: 240px;
+        display: flex;
+        margin-top: 20px;
+      }
+      .innerBody .iwrapper .bottom .skills {
+        width: 280px;
+        height: 10px;
+        background-color: gray;
+        border-radius: 5%;
+        margin-left: 15px;
+      }
+      .innerBody .iwrapper .bottom .htmlSkill {
+        width: 90%;
+        height: 100%;
+        background-color: red !important;
+      }
+      .innerBody .iwrapper .bottom .cssSkill {
+        width: 80%;
+        height: 100%;
+        background-color: red !important;
+      }
+      .innerBody .iwrapper .bottom .jsSkill {
+        width: 65%;
+        height: 100%;
+        background-color: red !important;
+      }
+      .innerBody .iwrapper .bottom .skills2 {
+        width: 280px;
+        height: 10px;
+        background-color: gray;
+        border-radius: 5%;
+        margin-left: 15px;
+      }
+      .innerBody .iwrapper .bottom .photoSkill {
+        width: 100%;
+        height: 100%;
+        background-color: green !important;
+      }
+      .innerBody .iwrapper .bottom .sketchSkill {
+        width: 85%;
+        height: 100%;
+        background-color: green !important;
+      }
+      .innerBody .iwrapper .bottom .adobeSkill {
+        width: 90%;
+        height: 100%;
+        background-color: green !important;
+      }
+      .innerBody .iwrapper .bottom .left {
+        width: 50%;
+        height: 100%;
+        margin-right: 10px;
+      }
+      .innerBody .iwrapper .bottom .left ul {
+        list-style-type: none;
+      }
+      .innerBody .iwrapper .bottom .left ul li {
+        margin: 10px;
+      }
+      .innerBody .iwrapper .bottom .right {
+        width: 50%;
+        height: 100%;
+      }
+      .innerBody .iwrapper .bottom .right ul {
+        list-style-type: none;
+      }
+      .innerBody .iwrapper .bottom .right ul li {
+        margin: 10px;
+      }
+   
