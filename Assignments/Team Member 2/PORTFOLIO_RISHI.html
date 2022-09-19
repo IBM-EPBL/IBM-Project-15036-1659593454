@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <title>Resume</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Urbanist", sans-serif;
+      }
+      #profile {
+        position: absolute;
+        bottom: -40px;
+        left: 70px;
+        object-fit: cover;
+        border: 5px solid #fff;
+      }
+      .mainBody {
+        width: 100%;
+        height: 860px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .nav {
+        width: 85%;
+        height: 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 350px;
+        font-size: larger;
+      }
+      .nav ul {
+        list-style-type: none;
+      }
+      .nav .right ul {
+        display: flex;
+        gap: 20px;
+      }
+      .innerBody {
+        width: 85%;
+        height: 85%;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+          rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+          rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+      }
+      .innerBody .iwrapper {
+        margin: 20px;
+      }
+      .innerBody .iwrapper .top {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: rgb(48, 70, 157);
+      }
+      .innerBody .iwrapper .top .profile {
+        width: 40%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        position: relative;
+      }
+      .innerBody .iwrapper .top .desc {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: left;
+        text-align: left;
+        justify-content: center;
+      }
+      .innerBody .iwrapper .top .desc button {
+        width: 130px;
+        height: 40px;
+        border-radius: 25px;
+      }
+
+      /* midddle */
+      .innerBody .iwrapper .middle {
+        width: 100%;
+        height: 180px;
+        display: flex;
+        margin-top: 60px;
+        gap: 50px;
+      }
+      .innerBody .iwrapper .middle .left {
+        width: 750px;
+        height: 100%;
+      }
+      .innerBody .iwrapper .middle .left h2 {
+        margin-bottom: 20px;
+      }
+      .innerBody .iwrapper .middle .left p {
+        width: 600px;
+        letter-spacing: 1px;
+        line-height: 1.4;
+      }
+      .innerBody .iwrapper .middle .right1 {
+        width: 200px;
+        height: 100%;
+      }
+      .innerBody .iwrapper .middle .right1 ul {
+        list-style-type: none;
+        margin-top: 20px;
+      }
+      .innerBody .iwrapper .middle .right2 {
+        width: 200px;
+        height: 100%;
+      }
+      .innerBody .iwrapper .middle .right2 ul {
+        list-style-type: none;
+        margin-top: 20px;
+      }
+
+      /* bottom */
+      .innerBody .iwrapper .bottom {
+        width: 100%;
+        height: 240px;
+        display: flex;
+        margin-top: 20px;
+      }
+      .innerBody .iwrapper .bottom .skills {
+        width: 280px;
+        height: 10px;
+        background-color: gray;
+        border-radius: 5%;
+        margin-left: 15px;
+      }
+      .innerBody .iwrapper .bottom .htmlSkill {
+        width: 90%;
+        height: 100%;
+        background-color: red !important;
+      }
+      .innerBody .iwrapper .bottom .cssSkill {
+        width: 90%;
+        height: 100%;
+        background-color: red !important;
+      }
+      .innerBody .iwrapper .bottom .jsSkill {
+        width: 65%;
+        height: 100%;
+        background-color: red !important;
+      }
+      .innerBody .iwrapper .bottom .skills2 {
+        width: 280px;
+        height: 10px;
+        background-color: gray;
+        border-radius: 5%;
+        margin-left: 15px;
+      }
+      .innerBody .iwrapper .bottom .photoSkill {
+        width: 90%;
+        height: 100%;
+        background-color: green !important;
+      }
+      .innerBody .iwrapper .bottom .sketchSkill {
+        width: 85%;
+        height: 100%;
+        background-color: green !important;
+      }
+      .innerBody .iwrapper .bottom .adobeSkill {
+        width: 95%;
+        height: 100%;
+        background-color: green !important;
+      }
+      .innerBody .iwrapper .bottom .left {
+        width: 50%;
+        height: 100%;
+        margin-right: 10px;
+      }
+      .innerBody .iwrapper .bottom .left ul {
+        list-style-type: none;
+      }
+      .innerBody .iwrapper .bottom .left ul li {
+        margin: 10px;
+      }
+      .innerBody .iwrapper .bottom .right {
+        width: 50%;
+        height: 100%;
+      }
+      .innerBody .iwrapper .bottom .right ul {
+        list-style-type: none;
+      }
+      .innerBody .iwrapper .bottom .right ul li {
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mainBody">
+      <div class="nav">
+        <div class="left">
+          <h3>Rishi</h3>
+        </div>
+        <div class="right">
+          <ul>
+            <li><i class="fa fa-twitter"></i></li>
+            <li><i class="fa fa-instagram"></i></li>
+            <li><i class="fa fa-linkedin"></i></li>
+            <li><i class="fa fa-github"></i></li>
+          </ul>
+        </div>
+      </div>
+      <div class="innerBody">
+        <div class="iwrapper">
+          <div class="top">
+            <div class="profile">
+              <img
+                id="profile"
+                src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=600"
+                width="200px"
+                height="200px"
+              />
+            </div>
+            <div class="desc">
+              <h1 style="color: #fff">Rishi Baskaran</h1>
+              <h5 style="color: #fff">CS Student and Front-end Developer</h5>
+              <button type="button" id="dwnld" style="background-color: white">
+                Donwload CV
+              </button>
+            </div>
+          </div>
+          <div class="middle">
+            <div class="left">
+              <h2>About Me</h2>
+              <p>
+                I am extremely motivated to constantly develop my skills and
+                grow professionally. I am confident in my ability to come up
+                with interesting ideas.
+              </p>
+            </div>
+            <div class="right1">
+              <ul>
+                <li>Age</li>
+                <li>Email</li>
+                <li>Phone</li>
+                <li>Address</li>
+              </ul>
+            </div>
+            <div class="right2">
+              <ul>
+                <li>20</li>
+                <li>rishi@gmail.com</li>
+                <li>+91 123456789</li>
+                <li>thecity Place, TamilNadu</li>
+              </ul>
+            </div>
+          </div>
+          <h2 id="title" style="margin-top: 20px">Professional Skills</h2>
+          <div class="bottom">
+            <div class="left">
+              <ul>
+                <li>Html</li>
+                <div class="skills"><div class="htmlSkill"></div></div>
+                <li>CSS</li>
+                <div class="skills"><div class="cssSkill"></div></div>
+                <li>JavaScript</li>
+                <div class="skills"><div class="jsSkill"></div></div>
+              </ul>
+            </div>
+            <div class="right">
+              <ul>
+                <li>Adobe PhotoShop</li>
+                <div class="skills2"><div class="photoSkill"></div></div>
+                <li>Sketch</li>
+                <div class="skills2"><div class="sketchSkill"></div></div>
+                <li>Adobe XD</li>
+                <div class="skills2"><div class="adobeSkill"></div></div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
