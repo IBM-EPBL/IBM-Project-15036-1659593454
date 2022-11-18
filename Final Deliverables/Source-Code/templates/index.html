@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link
+      href="{{ url_for('static', filename='css/main.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <title>AI NUTRITION</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Sono", sans-serif;
+        
+      }
+      a{
+        text-decoration: none;
+        color: black;
+      }
+      .Container {
+        width: 99vw;
+        height: 1500px;
+        display: flex;
+      }
+      .Container .Wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+      }
+      .Container .Wrapper .header {
+        display: flex;
+        justify-content: center;
+      }
+      .Container .Wrapper .nav {
+        display: flex;
+        justify-content: center;
+      }
+      .Container .Wrapper .nav ul {
+        display: flex;
+        list-style-type: none;
+        margin-top: 20px;
+      }
+      .Container .Wrapper .nav ul li {
+        margin: 10px;
+      }
+      .Container .Wrapper .nav .active {
+        color: red;
+      }
+      .Container .Wrapper .Wrapper2 {
+        margin-top: 50px;
+        display: flex;
+        gap: 20px;
+        width: 70%;
+        justify-content: center;
+        background-color: orange;
+      }
+      .Container .Wrapper .Wrapper2 .imgContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .Container .Wrapper .Wrapper2 .desc {
+        font-size: x-large;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      .Container .Wrapper .Wrapper3 {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: row;
+        gap: 110px;
+      }
+      .Container .Wrapper .Wrapper3 .box {
+        width: 300px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+          rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+      }
+      .Container .Wrapper .Wrapper3 .box .imgContainer img {
+        border-radius: 50%;
+      }
+
+      .Container .Wrapper .Wrapper3 .box .desc {
+        padding: 10px;
+        background-color: orange;
+      }
+
+      .Container .Wrapper .footer{
+        background-color: orange;
+        position: absolute;
+        bottom: 50px;
+        display: flex;
+        width: 99vw;
+        height: 300px;
+      }
+      .Container .Wrapper .footer .left{
+        width: 50%;
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+      }
+      .Container .Wrapper .footer .left .desc{
+        width: 40%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .Container .Wrapper .footer .right{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-left: 3px solid #fff;
+      }
+      .Container .Wrapper .footer .right ul{
+        list-style-type: none;
+      }
+      .button-55 {
+        align-self: center;
+        background-color: #fff;
+        background-image: none;
+        background-position: 0 90%;
+        background-repeat: repeat no-repeat;
+        background-size: 4px 3px;
+        border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+        border-style: solid;
+        border-width: 2px;
+        box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
+        box-sizing: border-box;
+        color: #41403e;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Neucha, sans-serif;
+        font-size: 1rem;
+        line-height: 23px;
+        outline: none;
+        padding: 0.75rem;
+        text-decoration: none;
+        transition: all 235ms ease-in-out;
+        border-bottom-left-radius: 15px 255px;
+        border-bottom-right-radius: 225px 15px;
+        border-top-left-radius: 255px 15px;
+        border-top-right-radius: 15px 225px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+      }
+
+      .button-55:hover {
+        box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
+        transform: translate3d(0, 2px, 0);
+      }
+
+      .button-55:focus {
+        box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Container">
+      <div class="Wrapper">
+        <div class="header">
+          <h1>Nutrition Assistant</h1>
+        </div>
+        <div class="nav">
+          <ul>
+            <li class="active">Home</li>
+            <li><a href="{{ url_for('image1')}}">Classify</a></li>
+            <li><a href="{{ url_for('checkall')}}">Check All</a></li>
+            <li><a href="{{ url_for('contact')}}">Contact</a></li>
+            <li>Signup/Login</li>
+          </ul>
+        </div>
+        <div class="Wrapper2">
+          <div class="imgContainer">
+            <img src="../static/Images/Home1.jpg" width="500" height="500" />
+          </div>
+          <div class="desc">
+            <p>
+              Emphasizes fruits, vegetables, whole grains, and fat-free or
+              low-fat milk and milk products. Includes a variety of protein
+              foods such as seafood, lean meats and poultry, eggs, legumes
+              (beans and peas), soy products, nuts, and seeds.
+            </p>
+            <div class="MoreButton">
+              <button class="button-55" role="button">Checkout</button>
+            </div>
+          </div>
+        </div>
+        <div class="Wrapper3">
+          <div class="box">
+            <div class="imgContainer">
+              <img src="../static/Images/grape.jpg" width="100" height="100" />
+            </div>
+            <div class="desc">
+              <p>
+                They have been associated with prevention of cancer, heart
+                disease, high blood pressure, and constipation.
+              </p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="imgContainer">
+              <img
+                src="../static/Images/pineapple.jpg"
+                width="100"
+                height="100"
+              />
+            </div>
+            <div class="desc">
+              <p>
+                Pineapple is not only valued for its sweet taste, also used to
+                treat digestion problems and inflammation.
+              </p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="imgContainer">
+              <img src="../static/Images/guava.jpg" width="100" height="100" />
+            </div>
+            <div class="desc">
+              <p>
+                People use guava leaf tea as a treatment for diarrhea in several
+                countries, including India and China.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+            <div class="left">
+                <div class="imgContainer">
+                    <img src="../static/Images/footer.jpg" width="110" height="160" style="object-fit: cover;">
+                </div>
+                <div class="desc">
+                    He is our special therapist for nutrition providance, and founder of this site. For more reference you can contact using given information.
+                </div>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>Contact - phone : +91 123456789</li>
+                    <li>Contact - email : xyz@gmail.com</li>
+                </ul>
+            </div>
+          </div>
+      </div>
+      
+    </div>
+  </body>
+</html>
