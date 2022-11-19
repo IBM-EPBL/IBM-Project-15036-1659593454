@@ -1,7 +1,7 @@
 # IBM-Project-15036-1659593454
 Nutrition assistant Application
 
-# to run
+# Run Command
 python app.py 
 
 # Main Contents
